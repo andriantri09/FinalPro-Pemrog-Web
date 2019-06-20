@@ -1,0 +1,41 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Francois One', sans-serif;
+}
+
+nav{
+    color: white;
+
+}
+
+.ul nav{
+    color: aqua;
+}
+
+.nav-item a {
+    color: #FFF !important;
+}
+
+.nav-item.active a {
+    border-bottom: 2px solid white;
+}
+
+.carousel-item {
+    padding: 20px;
+    position: relative;
+    size: 1244px 450px;
+}
+
+
+.page-footer {
+    color: aliceblue;
+}
+
+
+.footer-list li a {
+    padding: 0;
+}
+
+
