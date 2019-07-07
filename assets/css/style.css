@@ -1,0 +1,124 @@
+* {
+ box-sizing: border-box;
+}
+
+.row {
+    margin: 0;
+}
+
+body, html
+{
+    
+	margin: 0;
+	padding: 0;
+	font-family: 'Francois One', sans-serif;
+}
+
+nav{
+    color: white;
+    position: relative;
+}
+
+.ul nav{
+    color: aqua;
+}
+
+.nav-item a {
+    color: #FFF !important;
+}
+
+.nav-item.active a {
+    border-bottom: 2px solid white;
+}
+
+a.shopping-cart-link {
+    color: #FFF;
+    display: inline-block;
+    margin-right: -20em;
+}
+
+.carousel {
+    top: 1px;
+    padding: 1px;
+    margin: 25px;
+    border: 25px;
+    font-weight: 100%;
+
+}
+
+.card-group {
+    border: 1px ;
+    solid:whitesmoke;
+}
+.face:hover {
+  animation: shake 0.82s cubic-bezier(.18,.03,.9,.48) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 0px;
+  
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.card {
+    height: auto;
+    margin: 15px;
+    padding: 50px;
+}
+
+    a.card-title {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        margin: 0 auto;
+        color: black;
+    }
+
+.new-img {
+    position: relative;
+}
+
+
+footer.page-footer {
+    display: block;
+    width: 100%;
+}
+
+.page-footer {
+    color: aliceblue;
+    width: 100%;
+}
+
+
+.footer-list li a {
+    padding: 0;
+}
+ul.text-uppercase {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 600px) {
+    .body,.nav-item,.card,.carousel, .page-footer,.card-group ,.new-img{
+      width: 100% !important; 
+      height: 100% !important;/* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }

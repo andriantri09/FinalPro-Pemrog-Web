@@ -1,0 +1,57 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Francois One', sans-serif;
+}
+
+nav{
+    color: white;
+
+}
+
+.ul nav{
+    color: aqua;
+}
+
+.nav-item a {
+    color: #FFF !important;
+}
+
+.nav-item.active a {
+    border-bottom: 2px solid white;
+}
+
+
+/*==================ISI===========*/
+.uncovers {
+    text-align: left;
+    font-family: 'Francois One', sans-serif;
+    font-size: 35px;
+    padding: 1px;
+    margin: 25px;
+    border: 25px;
+}
+
+.btn-lookbok {
+    background: black;
+    color: #FFF;
+}
+.a  {
+    background: black;
+    color: #FFF;
+}
+
+
+.footer-list li a {
+    padding: 0;
+}
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 600px) {
+    .header,.body,.nav-item,.card,.carousel, .page-footer,.card-group ,.new-img{
+      width: 100% !important; 
+      height: 100% !important;/* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }

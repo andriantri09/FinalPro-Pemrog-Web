@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The PRMN</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+    <title>Contack Us - The PRMN</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript"> 
+		$(window).scroll(function(){
+			if ($(this).scrollTop()>100){
+				$('.menu').addClass("sticky");
+			}
+			else
+			{
+				$('.menu').removeClass("sticky");
+			}
+		})
+	</script>
 
 </head>
 <body>
+  <!-- Page Preloder -->
+	<div id="preloder">
+      <div class="loader"></div>
+    </div>
     <!--Nav Bar-->
     <nav class="navbar navbar-light" style="background-color: black">
         <img class="logo" src="assets/img/Logo.jpg" width="75px" width="75px">
@@ -31,8 +50,9 @@
                 <a  class="nav-link active" href="contact.html">CONTACT</a>
               </li>
           </ul>
+          <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
         <form class="form-inline">
-            <button type="button" class="btn btn-outline-light">Login PRMN</button>
+          <a href="login.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login PRMN</a>
         </form>
       </nav>
       
@@ -40,7 +60,8 @@
       <main>
             <div class="jumbotron jumbotron-fluid jumbotron__faq">
                 <div class="container">
-                  <h1 class="display-4">Contact Us</h1>
+                    
+                  <h1 class="display-4" style="text-align: center">Contact us</h1>
                 </div>
                 <div class="overlay"></div>
             </div>
@@ -66,14 +87,28 @@
                                 <p>55581</p>
     
                             </div>
-                        </div>
+                            <div id="map" style="width:100%;height:200px"></div>
+                    <script>
+                    function myMap() {
+                      var myCenter = new google.maps.LatLng(-7.7597444,110.4086899,18.75);
+                      var mapCanvas = document.getElementById("map");
+                      var mapOptions = {center: myCenter, zoom: 19};
+                      var map = new google.maps.Map(mapCanvas, mapOptions);
+                      var marker = new google.maps.Marker({position:myCenter});
+                      marker.setMap(map);
+                      infowindow.open(map,marker);
+                    }
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzrgx3DogrUKfNWnKjivXmmvhjuTz3YVI&callback=myMap"></script>
                     </div>
-            </div>
-    
-        </main>
+                                            </div>
+                                        </div>
+                                </div>
+                        
+                            </main>
+        
 
-      
-      <!-- Footer -->
+  <!-- Footer -->
 <footer class="page-footer font-small indigo center " style="background-color: black">
   <!-- Footer -->
 <hr class="page-footer font-small blue pt-4">
@@ -105,16 +140,16 @@
   
           <ul class="list-unstyled footer-list">
             <li>
-                <a  class="nav-link active" href="index.html">HOME</a>
+                <a style="color: aliceblue"  class="nav-link active" href="index.html">HOME</a>
             </li>
             <li>
-                <a  class="nav-link active" href="Shop.html">Shop</a>
+                <a style="color: aliceblue" class="nav-link active" href="Shop.html">Shop</a>
             </li>
             <li>
-                <a  class="nav-link active" href="lookbook.html">Lookbook</a>
+                <a style="color: aliceblue"  class="nav-link active" href="lookbook.html">Lookbook</a>
             </li>
             <li>
-                <a  class="nav-link active" href="contact.html">Contact</a>
+                <a style="color: aliceblue"  class="nav-link active" href="contact.html">Contact</a>
             </li>
           </ul>
   
@@ -127,22 +162,27 @@
           <!-- Links -->
           <h5 class="text-uppercase">Links</h5>
   
-          <ul class="list-unstyled">
+          <ul style="text-align: left;" class="list-unstyled">
             
               <!-- Facebook -->
-            <a class="fb-ic"  href="">
+            <a style="color: aliceblue" class="fb-ic"  href="">
                 <i class="fab fa-facebook-f fa-lg white-text mr-4 white" > </i>
               </a>
           
             
               <!-- Twitter -->
-            <a class="tw-ic" href="https://twitter.com/siskaeee_ofc">
+            <a style="color: aliceblue" class="tw-ic"  href="https://twitter.com/siskaeee_ofc">
               <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
             </a>
             
             <!--Instagram-->
-            <a class="ins-ic" href="https://www.instagram.com/wiendhie_kitty/?hl=id">
+            <a style="color: aliceblue" class="ins-ic" href="https://www.instagram.com/wiendhie_kitty/?hl=id">
               <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+            </a>
+
+            <!--Youtube-->
+            <a style="color: aliceblue" class="ins-ic" href="https://www.youtube.com/watch?v=8Q8ptxfeZAI">
+            <i class="fab fa-youtube fa-lg white-text mr-4"></i>
             </a>
           </ul>
   
@@ -155,6 +195,8 @@
     </div>
     <!-- Footer Links -->
     <hr style="background-color: whitesmoke" width="100%">
+  </br>
+  <hr style="background-color: whitesmoke" width="100%">
   
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2019 Copyright : The PRMN
